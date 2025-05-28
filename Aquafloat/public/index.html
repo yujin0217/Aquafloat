@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Aquafloat</title>
+
+    <!-- Chart.js 라이브러리 CDN 추가 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- 스타일 파일 연결 (선택) -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>센서 데이터</h1>
+
+    <!-- 기존 텍스트 표시 -->
+    <p id="r-value">R: -</p>
+    <p id="s-value">S: -</p>
+    <p id="t-value">T: -</p>
+
+    <!-- R 그래프 -->
+    <canvas id="R" width="600" height="200"></canvas>
+    <!-- S 그래프 -->
+    <canvas id="S" width="600" height="200"></canvas>
+    <!-- T 그래프 -->
+    <canvas id="T" width="600" height="200"></canvas>
+
+    <!-- JS 모듈 실행 -->
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

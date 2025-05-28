@@ -1,0 +1,19 @@
+canvas {
+
+  
+  display: block;
+  margin: 40px auto; /* 위아래 40px, 가운데 정렬 */
+  max-width: 90%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 전체 텍스트 가운데 정렬 */
+h1, p {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
