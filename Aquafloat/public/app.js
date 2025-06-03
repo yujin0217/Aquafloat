@@ -103,6 +103,10 @@ onValue(dataRef, (snapshot) => {
     document.getElementById('s-value').textContent = `S: ${S}`;
     document.getElementById('t-value').textContent = `T: ${T}`;
 
+    // 수질 상태 예시 로직
+    const status = (R < 300 && S < 300 && T < 300) ? '양호' : '주의 필요';
+    document.getElementById('status').textContent = `현재 수질 상태: ${status}`;
+
     // 그래프에 실시간 데이터 추가
     const now = new Date().toLocaleTimeString();
 
@@ -116,7 +120,7 @@ onValue(dataRef, (snapshot) => {
     tChart.data.datasets[0].data.push(T);
 
     // 최대 데이터값 저장
-    const maxLen = 100; // 최대 데이터 개수
+    const maxLen = 100;
     [rChart, sChart, tChart].forEach(chart => {
       if (chart.data.labels.length > maxLen) {
         chart.data.labels.shift();
